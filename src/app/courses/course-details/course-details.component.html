@@ -1,0 +1,27 @@
+<div *ngIf="course else noCourseTemplate">
+    <h3>
+      Course #{{course.id}} Details
+    </h3>
+    <hr>
+    <div>
+      <p>
+        ID: #{{course.id}}
+      </p>
+      <p>
+        Title: {{course.title}}
+      </p>
+      <p>
+        Instructor: {{course.instructor}}
+      </p>
+      <p>
+        Available : {{course.isAvailabel}}
+      </p>
+    </div>
+  </div>
+  <!-- only appear on screen when condition is false -->
+  <ng-template #noCourseTemplate> 
+    <p>
+      No Course Selected
+    </p>
+  </ng-template>
+  
